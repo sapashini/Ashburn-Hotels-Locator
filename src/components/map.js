@@ -44,6 +44,7 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 class Map extends Component {
 
 	render() {
+		window.gm_authFailure = () => {alert("Error authenticating with the Google Maps API...please check your API key!")};
 		return (
 				<MyMapComponent
 				  role="application"

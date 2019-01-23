@@ -43,7 +43,11 @@ class Utills {
 			urlPrams)}`, dataToFetch
 		).then(
 			res => res.json()
-		);
+		)
+		.catch(error => {
+			alert("Error, while fetching data from Foursquare API... Sorry!");
+			console.log("Error trying to get hotels venues!")
+		});
 
 	}
 }
