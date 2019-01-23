@@ -29,8 +29,7 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 			    							<img 
 				    							src={`${venueInfo.bestPhoto.prefix}250x250${
 				    								venueInfo.bestPhoto.suffix}`}
-				    							alt={`${venueInfo.photos.prefix}250x250${
-				    								venueInfo.photos.suffix}`}
+				    							alt={"venue details"}
 			    							/>
 			    							<h4>Address: {venueInfo.location.formattedAddress}</h4>
 			    							<h4>Phone: {venueInfo.contact.formattedPhone}</h4>
