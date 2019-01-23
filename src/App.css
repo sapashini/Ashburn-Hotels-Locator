@@ -1,32 +1,178 @@
+/*
+* Main app style
+*/
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 100vh;
+  width:100vw;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  vertical-align: middle;
+  background-color: #521751;
+  min-height: 5vh;
   font-size: calc(10px + 2vmin);
   color: white;
+  height: 45px;
+  width: 100vw;
+  margin-bottom: 4px; 
+  padding-left: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.App-main {
+  height: calc(100vh - 49px);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.map {
+    transition: 0.5s ease;
+    flex: 0 1 auto;
 }
+
+/*
+* Side draw style
+*/
+section {
+  position: absolute;
+  left: 0;
+  top: 57px;
+  z-index: 1;
+  height: calc(100vh - 49px);
+}
+
+#side-drawer {
+    width: 375px;
+    height: calc(100vh - 49px);
+    background-color: #521751;
+    text-align: center;
+    max-width: 100%;
+    transition: 0.5s ease;
+}
+
+#side-drawer.show {
+  transform: translate3d(-100vw, 0, 0);
+}
+
+#side-drawer.hide {
+  transform: translate3d(0vw, 0, 0);
+}
+
+#search {
+  width:88%;
+  height:2rem;
+  font-size: 1rem;
+  padding:10px;
+  margin: 5 10px 0 15px;
+}
+
+.text-label {
+  color: white;
+  margin-top: 30px;
+  padding: 4px;
+}
+
+.venue-list{
+  margin: 8px;
+  padding: 0 0 0 22px;
+  text-align: left;
+}
+
+.list-item-btn {
+  list-style: none;
+  font-size: 0.9rem;
+  padding: 0.1rem;
+  margin-top: 2.5rem;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  color: white;
+  background-color: #521751;
+  border: none;
+}
+.list-item {
+  list-style: none;
+}
+.list-item-btn:hover {
+  background-color: gray;
+}
+
+/*
+* ToggleButton style
+*/
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    width: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px 0 0 0;
+    box-sizing: border-box;
+    margin-right: 45px;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.toggle-button-line {
+    width: 30px;
+    height: 2px;
+    background: white;
+}
+
+/*
+* Responsive styles
+*/
+@media screen and (max-width:375px) {
+  .list-item {
+  font-size: 0.7rem;
+  }
+  h2 {
+  font-size: 1.2rem;
+  }
+  .list-item-btn {
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+  }
+  #side-drawer {
+    width: 36%;
+    overflow: auto;
+    height: 100%;
+    margin-top: -1px;
+  }
+  .text-label {
+    font-size: 0.8rem;
+  }
+  .App-main {
+    display: flex;
+    flex-flow: column;
+    margin-top: 2px;
+    margin-bottom: -18px;
+  }
+  #search {
+    margin: 0 0 0 10px;
+  }
+  .App-header,.toggle-button {
+    padding-top: 6px;
+  }
+  .toggle-button {
+    margin-right: 22px;
+  }
+
+}
+
+
+
+
+
+
+
