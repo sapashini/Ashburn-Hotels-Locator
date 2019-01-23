@@ -10,7 +10,7 @@ Users are able to search and filter a known hotel name or click randomly on it i
 * Start the development server with `npm start`
 * Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Project Dependencies
+### Project Dependencies
 
 The project dependencies are:
 
@@ -19,18 +19,18 @@ The project dependencies are:
 * Create React App
 * FourSquare Places API
 
-## Ways to Run the App from the command line:
+### Ways to Run the App from the command line:
 
 * npm start, will start the app in development mode.
 * npm test, Runs the test watcher in an interactive mode.
 * npm run build, will builds the app for production to the build folder.
 
-## Running the App offline:
+### Running the App offline:
 
 * Service Worker
  
  When a service worker is registered,it calls "register()" method that gives the app an offline capabilities.
- This is however works only when in production mode.
+ This however, works only when in production mode.
 
 ### Resources and References:
 
