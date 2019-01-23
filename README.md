@@ -1,6 +1,6 @@
 ### Project Description
 
-The project, ##### Neighborhood Map (React)  is a requirement for # Udacity ### Front End Web Developer Nanodegree course.
+The project, Neighborhood Map (React)  is a requirement for Udacity Front End Web Developer Nanodegree course.
 
 In the project,I created an app to help users locate a hotel in the City of Asburn Virginia and it's surroundings.
 Users are able to search and filter a known hotel name or click randomly on it in a list or on a marker in a map display for detail information about the hotel.
