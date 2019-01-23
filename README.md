@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project Description
 
-## Available Scripts
+In the project,I created an app to help users locate a hotel in the City of Asburn Virginia and it's surroundings.
+Users are able to search and filter a known hotel name or click randomly on it in a list or on a marker in a map display for detail information about the hotel.
 
-In the project directory, you can run:
+### How to Use the App
 
-### `npm start`
+* Clone or download this repository to you computer,
+* Install all project dependencies with `npm install`
+* Start the development server with `npm start`
+* Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Dependencies
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+The project dependencies are:
 
-### `npm test`
+* Google Maps API
+* React Google Maps
+* Create React App
+* FourSquare Places API
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Ways to Run the App from the command line:
 
-### `npm run build`
+* npm start, will start the app in development mode.
+* npm test, Runs the test watcher in an interactive mode.
+* npm run build, will builds the app for production to the build folder.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running the App offline:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+* Service Worker
+ 
+ When a service worker is registered,it calls "register()" method that gives the app an offline capabilities.
+ This is however works only when in production mode.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Resources and References:
 
-### `npm run eject`
+* [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* [Google Maps Platform](https://developers.google.com/maps/documentation/javascript/tutorial).
+* [Udacity Neighborhood Map Project Resources](https://www.diigo.com/outliner/fkkuvb/Udacity-Neighborhood-Map-Project-(project-%237)?key=25wgqnwals).
+* [Forrest Walker Walk Through](https://www.youtube.com/watch?v=Dj5hzKBxCBI&index=3&list=PL4rQq4MQP1crXuPtruu_eijgOUUXhcUCP).
+* [Students Hub](https://study-hall.udacity.com/sg-534769-9999/rooms/community:nd001:534769-cohort-9999-project-1351?contextType=room).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

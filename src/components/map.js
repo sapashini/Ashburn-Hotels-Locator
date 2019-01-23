@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker,InfoWindow } from "react-google-maps";
 
+// withScriptjs, is used to avoid puting a <script/> tag for Google Maps JavaScript API v3 in the HTML's <head/> element.
 const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 		<GoogleMap
 		    defaultZoom={10}
@@ -25,8 +26,11 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 			    					<InfoWindow>
 			    						<React.Fragment>
 			    							<h2>{venueInfo.name}</h2>
-			    							<img src={`${venueInfo.bestPhoto.prefix}250x250${
-			    								venueInfo.bestPhoto.suffix}`} alt={"venue details"}
+			    							<img 
+				    							src={`${venueInfo.bestPhoto.prefix}250x250${
+				    								venueInfo.bestPhoto.suffix}`}
+				    							alt={`${venueInfo.photos.prefix}250x250${
+				    								venueInfo.photos.suffix}`}
 			    							/>
 			    							<h4>Address: {venueInfo.location.formattedAddress}</h4>
 			    							<h4>Phone: {venueInfo.contact.formattedPhone}</h4>
@@ -59,5 +63,4 @@ class Map extends Component {
 	}
 
 }
-
 export default Map;
