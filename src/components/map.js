@@ -33,6 +33,7 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 														venueInfo.bestPhoto.suffix}`}
 														alt={"venue details"}
 												/>
+												<h6>Image Source: Fouresquare API</h6>
 				    							<h4>Address: {venueInfo.location.formattedAddress}</h4>
 				    							<h4>Phone: {venueInfo.contact.formattedPhone}</h4>
 				    						</React.Fragment>
