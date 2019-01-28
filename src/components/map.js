@@ -14,31 +14,54 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
     			props.markers && props.markers
 	    			.filter(marker => marker.isVisible)
 	    			.map((marker,index,arr) => {
-	    				const venueInfo = props.venues.find(venue => venue.id === marker.id);
-	    				return (
-	    					<Marker 
-		    					key={index} 
-		    					position={{ lat: marker.lat, lng: marker.lng }} 
-		    					onClick={ () => props.onMarkerClick(marker) } 
-		    					animation={arr.length === 1 ? google.maps.Animation.BOUNCE : google.maps.Animation.DROP}
-	    					>
-			    				{marker.isOpen && venueInfo.bestPhoto && (
-			    					<InfoWindow>
-			    						<React.Fragment>
-			    							<h2>{venueInfo.name}</h2>
-			    							<img 
-				    							src={`${venueInfo.bestPhoto.prefix}250x250${
-				    								venueInfo.bestPhoto.suffix}`}
-				    							alt={"venue details"}
-			    							/>
-			    							<h4>Address: {venueInfo.location.formattedAddress}</h4>
-			    							<h4>Phone: {venueInfo.contact.formattedPhone}</h4>
-			    						</React.Fragment>
-			    					</InfoWindow>
-				    			)}
+	    				let venueInfo = props.venues.find(venue => venue.id === marker.id);
+	    				if(venueInfo.bestPhoto) {
+		    				return (
+		    					<Marker
+			    					key={index}
+			    					position={{ lat: marker.lat, lng: marker.lng }}
+			    					onClick={ () => props.onMarkerClick(marker) }
+			    					animation={arr.length === 1 ? google.maps.Animation.BOUNCE : google.maps.Animation.DROP}
+		    					>
 
-		    				</Marker>
-	    				);
+		    						{ marker.isOpen  && venueInfo.bestPhoto && (
+				    					<InfoWindow>
+				    						<React.Fragment>
+				    							<h2>{venueInfo.name}</h2>
+				    							<img
+													src={`${venueInfo.bestPhoto.prefix}250x250${
+														venueInfo.bestPhoto.suffix}`}
+														alt={"venue details"}
+												/>
+				    							<h4>Address: {venueInfo.location.formattedAddress}</h4>
+				    							<h4>Phone: {venueInfo.contact.formattedPhone}</h4>
+				    						</React.Fragment>
+				    					</InfoWindow>
+					    				)}
+			    				</Marker>
+	    					)
+				    	}else{
+				    		return (
+					    			<Marker
+				    					key={index}
+				    					position={{ lat: marker.lat, lng: marker.lng }}
+				    					onClick={ () => props.onMarkerClick(marker) }
+				    					animation={arr.length === 1 ? google.maps.Animation.BOUNCE : google.maps.Animation.DROP}
+			    					>
+
+			    						// For non-premium venue details;
+					    				{marker.isOpen  && venueInfo && (
+					    					<InfoWindow>
+					    						<React.Fragment>
+					    							<h2>{venueInfo.name}</h2>
+					    							<h5>"Sorry photo details isn't available now"</h5>
+					    							<h4>Address: {venueInfo.location.formattedAddress}</h4>
+					    						</React.Fragment>
+					    					</InfoWindow>
+						    				)}
+				    				</Marker>
+	    					)
+				    	}
 	    		})
     		}
   		</GoogleMap>
