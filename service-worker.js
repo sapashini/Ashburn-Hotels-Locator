@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Ashburn-Hotels-Locator/precache-manifest.9f8e015ffb6cdd2a1b4ecf3c2a215983.js"
+  "/Ashburn-Hotels-Locator/precache-manifest.6fa13a9a5af3be421dfeb3071f4434ff.js"
 );
 
 workbox.clientsClaim();
