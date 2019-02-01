@@ -12,7 +12,7 @@ class App extends Component {
     venues: [],
     markers: [],
     center: [],
-    zoom: 11,
+    zoom: 13,
     sideDrawerOpen: false,
     upDateState: stateObject => {
       this.setState(stateObject);
