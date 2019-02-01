@@ -42,7 +42,7 @@
 section {
   position: absolute;
   left: 0;
-  top: 57px;
+  top: 49px;
   z-index: 1;
   height: calc(100vh - 49px);
 }
@@ -167,6 +167,9 @@ section {
   .toggle-button {
     margin-right: 22px;
   }
+  section {
+  top: 58px;
+}
 
 }
 

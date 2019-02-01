@@ -50,7 +50,7 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 				    					animation={arr.length === 1 ? google.maps.Animation.BOUNCE : google.maps.Animation.DROP}
 			    					>
 
-			    						// For non-premium venue details;
+
 					    				{marker.isOpen  && venueInfo && (
 					    					<InfoWindow>
 					    						<React.Fragment>
