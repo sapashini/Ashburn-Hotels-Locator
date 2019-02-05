@@ -8,7 +8,7 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 		    defaultZoom={10}
 		    zoom = {props.zoom}
 		    defaultCenter={{ lat: 39.050739, lng: -77.487425 }}
-		    center={props.center}
+		    center={{lat: props.latitude || 39.050739, lng: props.longitude || -77.487425}}
 		>
     		{
     			props.markers && props.markers
@@ -29,7 +29,7 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 				    						<React.Fragment>
 				    							<h2>{venueInfo.name}</h2>
 				    							<img
-													src={`${venueInfo.bestPhoto.prefix}160x160${
+													src={`${venueInfo.bestPhoto.prefix}250x250${
 														venueInfo.bestPhoto.suffix}`}
 														alt={"venue details"}
 												/>
